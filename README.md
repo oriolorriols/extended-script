@@ -9,7 +9,7 @@ This script is designed to automatically cut multicam sequences by switching to 
 **Frame Rate Compatibility:** Adjust the timeTicks variable based on the FPS (frames per second) of your sequence.
 
 ## Usage Instructions
-**Change the Number of Cameras:** Modify the numCameras variable to set how many cameras are available.
+**Change the Number of Cameras:** Modify the *numCameras* variable to set how many cameras are available.
 
 **Set Camera Priorities:** Adjust the weights array to assign different priorities to each camera. Cameras with higher weights will appear more frequently and have slightly longer durations.
 
