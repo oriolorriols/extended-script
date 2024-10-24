@@ -13,10 +13,11 @@ This script is designed to automatically cut multicam sequences by switching to 
 
 **Set Camera Priorities:** Adjust the weights array to assign different priorities to each camera. Cameras with higher weights will appear more frequently and have slightly longer durations.
 
-Adjust TimeTicks for FPS:
+**Adjust TimeTicks for FPS:**
 
 For **59.97 FPS** use **4233600000**
 For **25 FPS** use **254016000000**
+
 Change the timeTicks value accordingly depending on the frame rate of your sequence.
 
 ## Installation
