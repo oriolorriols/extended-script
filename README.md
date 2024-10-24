@@ -1,4 +1,5 @@
 Extended Script for Premiere Pro CC 2024
+
 This script is designed to automatically cut multicam sequences by switching to random cameras at variable intervals. You can adjust the number of cameras, assign priorities to each, and customize the intervals between cuts.
 
 Features
