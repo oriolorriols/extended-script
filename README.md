@@ -3,7 +3,7 @@
 This script is designed to automatically cut multicam sequences by switching to random cameras at variable intervals. You can adjust the number of cameras, assign priorities to each, and customize the intervals between cuts.
 
 ## Features
-**Multicam Switching:** Randomly cuts between cameras based on assigned weights (priority).
+### **Multicam Switching:** Randomly cuts between cameras based on assigned weights (priority).
 **Customizable Camera Priorities:** Higher weight values make a camera appear more frequently and have longer durations.
 **Flexible Cutting Intervals:** Intervals between camera cuts are randomized, with adjustable minimum and maximum durations.
 **Frame Rate Compatibility:** Adjust the timeTicks variable based on the FPS (frames per second) of your sequence.
