@@ -1,4 +1,5 @@
-﻿// control + f5
+﻿// CTRL + F5
+// ASEGURARSE DE MARCAR EL IN POINT AL INICIO DE LA SEQUENCIA
 
 // 59.97fps = 4233600000
 // 25fps =    254016000000
@@ -8,6 +9,8 @@ app.enableQE();
 var project = app.project;
 var sequence = project.activeSequence;
 var clip = qe.project.getActiveSequence().getVideoTrackAt(0).getItemAt(0);
+
+$.writeln("Sequence: " + sequence.name);
 
 var inPoint  = parseFloat(sequence.getInPoint());  // Obtener el punto de entrada como número
 var outPoint = parseFloat(sequence.getOutPoint()); // Obtener el punto de salida como número
@@ -20,7 +23,7 @@ var maxCutsEach = 6; // Tiempo máximo en segundos entre cortes
 var numCameras = 4;  // Número total de cámaras
 
 // Definir pesos para cada cámara (mayor peso para la cámara prioritaria)
-var weights = [2, 2, 4, 3]; // Pesos para cada cámara
+var weights = [3, 4, 2, 2]; // Pesos para cada cámara
 
 // Calcular la suma total de los pesos de forma manual
 var totalWeight = 0;
@@ -90,8 +93,11 @@ for (var t = 0; t < timecodes.length; t++) {
     // Actualizar el índice de cámara anterior
     previousCameraIndex = cameraIndex;
 
-    $.writeln("Cámara: " + cameraIndex);
-    $.writeln("Tiempo: " + currentTimeCode);
+    $.writeln("Camera: " + cameraIndex);
+    $.writeln("Time: " + currentTimeCode);
+
+    // Agregar un pequeño delay de 100 milisegundos para dar tiempo al programa de procesar
+    delay(300);
 
     // Cambiar la cámara
     qe.project.getActiveSequence().multicam.changeCamera(cameraIndex);
